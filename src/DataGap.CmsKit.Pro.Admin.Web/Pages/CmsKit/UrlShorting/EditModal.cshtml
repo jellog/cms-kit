@@ -1,0 +1,24 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Pages
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.UrlShorting
+
+@inject IHtmlLocalizer<CmsKitResource> L
+@model EditModalModel
+
+@{
+    Layout = null;
+}
+
+<jellog-dynamic-form jellog-model="ViewModel" asp-page="/CmsKit/UrlShorting/EditModal">
+    <jellog-modal>
+        <jellog-modal-header title="@L["Edit"].Value"></jellog-modal-header>
+        <jellog-modal-body>
+            <jellog-input asp-for="Id" />
+            <jellog-form-content />
+        </jellog-modal-body>
+        <jellog-modal-footer buttons="@(JellogModalButtons.Cancel|JellogModalButtons.Save)"></jellog-modal-footer>
+    </jellog-modal>
+</jellog-dynamic-form>

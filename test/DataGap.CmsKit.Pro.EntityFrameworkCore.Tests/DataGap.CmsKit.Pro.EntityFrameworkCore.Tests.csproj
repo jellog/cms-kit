@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>DataGap.CmsKit.Pro</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="$(MicrosoftPackageVersion)" />
+    <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.EntityFrameworkCore.Sqlite\DataGap.Jellog.EntityFrameworkCore.Sqlite.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DataGap.CmsKit.Pro.EntityFrameworkCore\DataGap.CmsKit.Pro.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\DataGap.Jellog.SettingManagement.EntityFrameworkCore\DataGap.Jellog.SettingManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.TestBase\DataGap.CmsKit.Pro.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

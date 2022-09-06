@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.MongoDB\DataGap.CmsKit.MongoDB.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Domain\DataGap.CmsKit.Pro.Domain.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\licensing\DataGap.Jellog.Commercial.Core\DataGap.Jellog.Commercial.Core.csproj" />-->
+	  <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Core\DataGap.Jellog.Core.csproj" />
+  </ItemGroup>
+
+</Project>

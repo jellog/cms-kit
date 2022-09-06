@@ -1,0 +1,23 @@
+﻿@page
+
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.UrlShorting
+@using DataGap.CmsKit.Pro.Admin.Web.Pages
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+
+@inherits AdminPageBase
+
+@model CreateModalModel
+
+@{
+    Layout = null;
+}
+
+<jellog-dynamic-form jellog-model="ViewModel" asp-page="/CmsKit/UrlShorting/CreateModal">
+    <jellog-modal>
+        <jellog-modal-header title="@L["New"].Value"></jellog-modal-header>
+        <jellog-modal-body>
+            <jellog-form-content />
+        </jellog-modal-body>
+        <jellog-modal-footer buttons="@(JellogModalButtons.Cancel | JellogModalButtons.Save)"></jellog-modal-footer>
+    </jellog-modal>
+</jellog-dynamic-form>

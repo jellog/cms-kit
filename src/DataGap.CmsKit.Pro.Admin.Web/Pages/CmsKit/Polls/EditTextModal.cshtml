@@ -1,0 +1,28 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.CmsKit.Admin.Web.Pages
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.Polls;
+@inject IHtmlLocalizer<CmsKitResource> L
+
+
+@model EditTextModal;
+@{
+    Layout = null;
+}
+
+@section scripts {
+<jellog-script src="/Pages/CmsKit/Polls/editTextModal.js" />
+    }
+
+<jellog-modal size="Large" id="editTextModal">
+    <jellog-modal-header title="@L["Edit"].Value"></jellog-modal-header>
+
+    <jellog-modal-body>
+        <div class="mb-3">
+            <small class="text-muted">Text</small>
+            <input id="textId" type="text" />
+            <button class="btn btn-primary float-end" type="submit" id="poll-change-text-button">@L["Save"]</button>
+        </div>
+    </jellog-modal-body>
+</jellog-modal>

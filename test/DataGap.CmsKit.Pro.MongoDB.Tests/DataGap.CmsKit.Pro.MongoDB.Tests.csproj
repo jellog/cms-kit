@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>DataGap.CmsKit.Pro</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="Mongo2Go" Version="$(Mongo2GoPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DataGap.CmsKit.Pro.MongoDB\DataGap.CmsKit.Pro.MongoDB.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.TestBase\DataGap.CmsKit.Pro.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

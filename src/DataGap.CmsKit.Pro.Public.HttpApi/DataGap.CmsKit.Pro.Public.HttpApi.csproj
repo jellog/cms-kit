@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Public.HttpApi\DataGap.CmsKit.Public.HttpApi.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Public.Application.Contracts\DataGap.CmsKit.Pro.Public.Application.Contracts.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\licensing\DataGap.Jellog.Commercial.Core\DataGap.Jellog.Commercial.Core.csproj" />-->
+	  <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Core\DataGap.Jellog.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Owl.reCAPTCHA" Version="0.5.0" />
+  </ItemGroup>
+
+</Project>

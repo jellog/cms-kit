@@ -1,0 +1,11 @@
+﻿@page
+@using Localization.Resources.JellogUi
+@using Microsoft.Extensions.Localization
+@using DataGap.Jellog.Users
+@inject IStringLocalizer<JellogUiResource> Localizer
+@inject ICurrentUser CurrentUser
+
+@if (!CurrentUser.IsAuthenticated)
+{
+    <a href="~/Account/Login">@Localizer["Login"]</a>
+}

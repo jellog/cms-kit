@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "my-app",
+  "private": true,
+  "dependencies": {
+    "@dataGap/jellog.aspnetcore.mvc.ui.theme.lepton": "^5.3.3",
+    "@dataGap/saas": "^5.3.3",
+    "@dataGap/audit-logging": "^5.3.3",
+    "@dataGap/identity": "^5.3.3",
+    "@dataGap/chat": "^5.3.3"
+  }
+}

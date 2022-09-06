@@ -1,0 +1,14 @@
+﻿@page
+@using Microsoft.Extensions.Localization
+@using DataGap.CmsKit.Localization
+@model DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.IndexModel
+@inject IStringLocalizer<CmsKitResource> L
+@{
+}
+
+@section scripts {
+    <jellog-script src="/client-proxies/cms-kit-pro-admin-proxy.js" />
+}
+
+<h1>Admin</h1>
+<p>@L["SamplePageMessage"]</p>

@@ -1,0 +1,29 @@
+﻿@page
+@using Localization.Resources.JellogUi
+@using Microsoft.Extensions.Localization
+@using DataGap.Jellog.GlobalFeatures
+@using DataGap.CmsKit.GlobalFeatures
+@using DataGap.CmsKit.Pro.Public.Web.Pages.Public.Shared.Components.Poll
+@inject IStringLocalizer<JellogUiResource> Localizer
+@model DataGap.CmsKit.Pro.Pages.Poll.Index
+
+<jellog-row>
+    <jellog-column size="_3">
+        @if (GlobalFeatureManager.Instance.IsEnabled<PollsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(PollViewComponent), new
+            {
+                widgetName = "poll-left"
+            })
+        }
+    </jellog-column>
+    <jellog-column size="_3">
+        @if (GlobalFeatureManager.Instance.IsEnabled<PollsFeature>())
+        {
+            @await Component.InvokeAsync(typeof(PollViewComponent), new
+            {
+                widgetName = "poll-right"
+            })
+        }
+    </jellog-column>
+</jellog-row>

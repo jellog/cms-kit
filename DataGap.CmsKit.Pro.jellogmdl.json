@@ -1,0 +1,135 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "DataGap.CmsKit.Pro.Domain.Shared": {
+      "path": "src/DataGap.CmsKit.Pro.Domain.Shared/DataGap.CmsKit.Pro.Domain.Shared.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Domain": {
+      "path": "src/DataGap.CmsKit.Pro.Domain/DataGap.CmsKit.Pro.Domain.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.EntityFrameworkCore": {
+      "path": "src/DataGap.CmsKit.Pro.EntityFrameworkCore/DataGap.CmsKit.Pro.EntityFrameworkCore.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.TestBase": {
+      "path": "test/DataGap.CmsKit.Pro.TestBase/DataGap.CmsKit.Pro.TestBase.jellogpkg.json",
+      "folder": "test"
+    },
+    "DataGap.CmsKit.Pro.EntityFrameworkCore.Tests": {
+      "path": "test/DataGap.CmsKit.Pro.EntityFrameworkCore.Tests/DataGap.CmsKit.Pro.EntityFrameworkCore.Tests.jellogpkg.json",
+      "folder": "test"
+    },
+    "DataGap.CmsKit.Pro.MongoDB.Tests": {
+      "path": "test/DataGap.CmsKit.Pro.MongoDB.Tests/DataGap.CmsKit.Pro.MongoDB.Tests.jellogpkg.json",
+      "folder": "test"
+    },
+    "DataGap.CmsKit.Pro.Domain.Tests": {
+      "path": "test/DataGap.CmsKit.Pro.Domain.Tests/DataGap.CmsKit.Pro.Domain.Tests.jellogpkg.json",
+      "folder": "test"
+    },
+    "DataGap.CmsKit.Pro.Application.Tests": {
+      "path": "test/DataGap.CmsKit.Pro.Application.Tests/DataGap.CmsKit.Pro.Application.Tests.jellogpkg.json",
+      "folder": "test"
+    },
+    "DataGap.CmsKit.Pro.HttpApi.Host": {
+      "path": "host/DataGap.CmsKit.Pro.HttpApi.Host/DataGap.CmsKit.Pro.HttpApi.Host.jellogpkg.json",
+      "folder": "host"
+    },
+    "DataGap.CmsKit.Pro.Web.Host": {
+      "path": "host/DataGap.CmsKit.Pro.Web.Host/DataGap.CmsKit.Pro.Web.Host.jellogpkg.json",
+      "folder": "host"
+    },
+    "DataGap.CmsKit.Pro.IdentityServer": {
+      "path": "host/DataGap.CmsKit.Pro.IdentityServer/DataGap.CmsKit.Pro.IdentityServer.jellogpkg.json",
+      "folder": "host"
+    },
+    "DataGap.CmsKit.Pro.Host.Shared": {
+      "path": "host/DataGap.CmsKit.Pro.Host.Shared/DataGap.CmsKit.Pro.Host.Shared.jellogpkg.json",
+      "folder": "host"
+    },
+    "DataGap.CmsKit.Pro.Web.Unified": {
+      "path": "host/DataGap.CmsKit.Pro.Web.Unified/DataGap.CmsKit.Pro.Web.Unified.jellogpkg.json",
+      "folder": "host"
+    },
+    "DataGap.CmsKit.Pro.MongoDB": {
+      "path": "src/DataGap.CmsKit.Pro.MongoDB/DataGap.CmsKit.Pro.MongoDB.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Application": {
+      "path": "src/DataGap.CmsKit.Pro.Application/DataGap.CmsKit.Pro.Application.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Application.Contracts": {
+      "path": "src/DataGap.CmsKit.Pro.Application.Contracts/DataGap.CmsKit.Pro.Application.Contracts.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.HttpApi": {
+      "path": "src/DataGap.CmsKit.Pro.HttpApi/DataGap.CmsKit.Pro.HttpApi.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.HttpApi.Client": {
+      "path": "src/DataGap.CmsKit.Pro.HttpApi.Client/DataGap.CmsKit.Pro.HttpApi.Client.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Web": {
+      "path": "src/DataGap.CmsKit.Pro.Web/DataGap.CmsKit.Pro.Web.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.Application": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.Application/DataGap.CmsKit.Pro.Admin.Application.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.Application.Contracts": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.Application.Contracts/DataGap.CmsKit.Pro.Admin.Application.Contracts.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.HttpApi": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.HttpApi/DataGap.CmsKit.Pro.Admin.HttpApi.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.HttpApi.Client": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.HttpApi.Client/DataGap.CmsKit.Pro.Admin.HttpApi.Client.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.Web": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.Web/DataGap.CmsKit.Pro.Admin.Web.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Public.Application": {
+      "path": "src/DataGap.CmsKit.Pro.Public.Application/DataGap.CmsKit.Pro.Public.Application.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Public.Application.Contracts": {
+      "path": "src/DataGap.CmsKit.Pro.Public.Application.Contracts/DataGap.CmsKit.Pro.Public.Application.Contracts.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Public.HttpApi": {
+      "path": "src/DataGap.CmsKit.Pro.Public.HttpApi/DataGap.CmsKit.Pro.Public.HttpApi.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Public.HttpApi.Client": {
+      "path": "src/DataGap.CmsKit.Pro.Public.HttpApi.Client/DataGap.CmsKit.Pro.Public.HttpApi.Client.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Public.Web": {
+      "path": "src/DataGap.CmsKit.Pro.Public.Web/DataGap.CmsKit.Pro.Public.Web.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.Blazor": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.Blazor/DataGap.CmsKit.Pro.Admin.Blazor.jellogpkg.json",
+      "folder": "src"
+    },
+    "DataGap.CmsKit.Pro.Admin.Blazor.Server": {
+      "path": "src/DataGap.CmsKit.Pro.Admin.Blazor.Server/DataGap.CmsKit.Pro.Admin.Blazor.Server.jellogpkg.json",
+      "folder": "src"
+    }
+  }
+}

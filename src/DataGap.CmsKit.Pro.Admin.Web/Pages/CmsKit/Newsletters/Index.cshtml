@@ -1,0 +1,50 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Layout
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.JellogPageToolbar
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Menus
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.Newsletters
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@{
+    PageLayout.Content.Title = L["Newsletters"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitProAdminMenus.Newsletters.NewsletterMenu;
+}
+
+@section scripts {
+    <jellog-script-bundle name="@typeof(IndexModel).FullName">
+        <jellog-script src="/client-proxies/cms-kit-pro-admin-proxy.js" />
+        <jellog-script src="/Pages/CmsKit/Newsletters/Index.js"/>
+    </jellog-script-bundle>
+}
+
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(JellogPageToolbarViewComponent), new {pageName = typeof(IndexModel).FullName})
+}
+
+<jellog-card>
+    <jellog-card-body>
+        <jellog-row id="AdvancedFilterSection">
+            <jellog-column size-lg="_6" size-md="_6">
+                <jellog-select asp-items="@Model.PreferencesSelectList" asp-for="Preference"/>
+            </jellog-column>
+            <jellog-column size-lg="_6" size-md="_6">
+                <div class="mb-3">
+                    <label class="form-label" for="Source">@L["Source"]</label>
+                    <div class="input-group">
+                        <input asp-for="Source" placeholder="@L["Source"]" class="form-control"/>
+                        <jellog-button button-type="Primary" id="RefreshSourceButton">
+                            <i class="fa fa-sync" aria-hidden="true"></i>
+                        </jellog-button>
+                    </div>
+                </div>
+            </jellog-column>
+        </jellog-row>
+    </jellog-card-body>
+</jellog-card>
+
+<jellog-table striped-rows="true" id="NewslettersTable" class="nowrap"></jellog-table>

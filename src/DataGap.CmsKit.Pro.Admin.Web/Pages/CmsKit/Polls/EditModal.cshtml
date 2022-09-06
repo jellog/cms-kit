@@ -1,0 +1,90 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.CmsKit.Admin.Web.Pages
+@using DataGap.CmsKit.Pro.Admin.Web.Pages
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.Polls
+
+@inherits AdminPageBase
+
+@model EditModalModel
+
+@{
+    Layout = null;
+}
+
+<form method="post" asp-page="/CmsKit/Polls/EditModal">
+    <jellog-modal size="@(JellogModalSize.Large)">
+        <jellog-modal-header title="@L["Edit"].Value"></jellog-modal-header>
+        <jellog-modal-body>
+            <jellog-input asp-for="Id" />
+            <jellog-tabs name="PollEditTabsId">
+                <jellog-tab title="@L["Question"].Value">
+                    <jellog-input asp-for="ViewModel.Question" />
+                    <jellog-select asp-for="ViewModel.Widget" />
+                    <jellog-input asp-for="ViewModel.StartDate" />
+                    <jellog-input asp-for="ViewModel.EndDate" />
+                    <jellog-input asp-for="ViewModel.ResultShowingEndDate" />
+                    <jellog-input asp-for="ViewModel.ShowVoteCount" />
+                    <jellog-input asp-for="ViewModel.ShowResultWithoutGivingVote" />
+                    <jellog-input asp-for="ViewModel.ShowHoursLeft" />
+                </jellog-tab>
+                <jellog-tab title="@L["Options"].Value">
+                    <h3>@L["Options"]</h3>
+                    <div class="pt-3 pb-5 clearfix">
+                        <jellog-row>
+                            <jellog-column size="_12">
+                                <jellog-input asp-for="NewOption" />
+                            </jellog-column>
+                        </jellog-row>
+                        <jellog-button id="AddNewOptionButton" button-type="Success" class="float-end mb-2">
+                            <i class="fa fa-plus"></i> @L["AddNew"]
+                        </jellog-button>
+                    </div>
+                    <jellog-table striped-rows="true" responsive-sm="true" id="OptionTableId" style="@(Model.ViewModel.PollOptions.Length > 0 ? "" : "display: none;")">
+                        <thead>
+                            <tr>
+                                <th scope="Column">@L["Text"]</th>
+                                <th scope="Column"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="OptionTableBodyId">
+                            @for (int i = 0; i < Model.ViewModel.PollOptions.Length; i++)
+                            {
+                                var option = Model.ViewModel.PollOptions[i];
+
+                                <tr>
+                                    <td>
+                                        @option.Text
+                                    </td>
+                                    <td class="text-end">
+                                        <button type="button" class="btn btn-outline-dark upOptionButton">
+                                            <i class="fa fa-arrow-up"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-dark downOptionButton">
+                                            <i class="fa fa-arrow-down"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary editOptionButton">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-danger deleteOptionButton">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                    <td hidden>
+                                        <input asp-for="@option.Id" name="ViewModel.PollOptions[@i].Id" id="@(Model.ViewModel.PollOptions[i].Id)" />
+                                        <input asp-for="@option.Text" name="ViewModel.PollOptions[@i].Text" id="@(Model.ViewModel.PollOptions[i].Text)" />
+                                        <input asp-for="@option.Order" name="ViewModel.PollOptions[@i].Order" id="@(Model.ViewModel.PollOptions[i].Order)" value="@i" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </jellog-table>
+                </jellog-tab>
+            </jellog-tabs>
+        </jellog-modal-body>
+        <jellog-modal-footer buttons="@(JellogModalButtons.Cancel|JellogModalButtons.Save)"></jellog-modal-footer>
+    </jellog-modal>
+</form>
+<input hidden id="OptionStartIndex" value="@Model.ViewModel.PollOptions.Length" />

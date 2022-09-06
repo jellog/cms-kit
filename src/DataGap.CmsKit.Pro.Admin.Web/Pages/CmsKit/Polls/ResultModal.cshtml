@@ -1,0 +1,47 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.CmsKit.Admin.Web.Pages
+@using DataGap.CmsKit.Pro.Admin.Web.Pages
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.Polls
+
+@inherits AdminPageBase
+
+@model ResultModal
+
+@{
+    Layout = null;
+}
+
+
+<jellog-modal size="@(JellogModalSize.Large)">
+    <jellog-modal-header title="@L["Result"].Value"></jellog-modal-header>
+    <jellog-modal-body>
+        <jellog-input asp-for="Id" />
+        <div class="p-3">
+            @foreach (var item in @Model.ViewModel.PollResultDetails)
+            {
+                var percentage = item.VoteCount > 0 ? item.VoteCount * 100 / Model.ViewModel.PollVoteCount : 0;
+
+                <div class="mb-4">
+                    <label class="form-check-label d-block text-primary">
+                        @item.Text
+                    </label>
+                    <div class="row">
+                        <div class="col pe-0">
+                            <div class="progress mt-2 hide-info" style="height: 12px;">
+                                <div class="progress-bar progress-bar-striped bg-primary progress-bar-animated" role="progressbar" style="width: @percentage%;" aria-valuenow="@percentage"> </div>
+                            </div>
+                        </div>
+                        <div class="col-2 text-start ps-0">
+                            <span class="badge hide-info text-primary">@(percentage + "%")</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </jellog-modal-body>
+    <jellog-modal-footer buttons="@(JellogModalButtons.Cancel)"></jellog-modal-footer>
+</jellog-modal>
+

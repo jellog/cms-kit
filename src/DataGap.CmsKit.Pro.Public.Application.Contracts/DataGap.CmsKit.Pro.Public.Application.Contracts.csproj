@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Public.Application.Contracts\DataGap.CmsKit.Public.Application.Contracts.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Domain.Shared\DataGap.CmsKit.Pro.Domain.Shared.csproj" />   
+    <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Caching\DataGap.Jellog.Caching.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "name": "demo-app",
+  "private": true,
+  "dependencies": {
+    "@dataGap/jellog.aspnetcore.mvc.ui.theme.lepton": "^5.3.3",
+    "@jellog/tui-editor": "^5.3.3",
+    "tui-code-snippet": "1.5.2",
+    "@dataGap/account": "^5.3.3",
+    "@jellog/cms-kit": "^5.3.3",
+    "slugify": "1.4.6",
+    "@jellog/jstree": "^5.3.3"
+  },
+  "resolutions": {
+    "jquery": "3.4.1"
+  }
+}

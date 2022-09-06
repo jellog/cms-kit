@@ -1,0 +1,876 @@
+{
+  "modules": {
+    "cms-kit-pro-admin": {
+      "rootPath": "cms-kit-pro-admin",
+      "remoteServiceName": "CmsKitAdmin",
+      "controllers": {
+        "DataGap.CmsKit.Admin.UrlShorting.UrlShortingAdminController": {
+          "controllerName": "UrlShortingAdmin",
+          "controllerGroupName": "UrlShortingAdmin",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "DataGap.CmsKit.Admin.UrlShorting.UrlShortingAdminController",
+          "interfaces": [
+            {
+              "type": "DataGap.CmsKit.Admin.UrlShorting.IUrlShortingAdminAppService"
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/url-shorting",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.UrlShorting.GetShortenedUrlListInput, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.UrlShorting.GetShortenedUrlListInput",
+                  "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.GetShortenedUrlListInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "ShortenedUrlFilter",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto>",
+                "typeSimple": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto>"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IReadOnlyAppService<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,System.Guid,DataGap.CmsKit.Admin.UrlShorting.GetShortenedUrlListInput>"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/url-shorting/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto",
+                "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IReadOnlyAppService<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,System.Guid,DataGap.CmsKit.Admin.UrlShorting.GetShortenedUrlListInput>"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/cms-kit-admin/url-shorting",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto",
+                "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.ICreateAppService<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,DataGap.CmsKit.Admin.UrlShorting.CreateShortenedUrlDto>"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/cms-kit-admin/url-shorting/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto",
+                "typeSimple": "DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IUpdateAppService<DataGap.CmsKit.Admin.UrlShorting.ShortenedUrlDto,System.Guid,DataGap.CmsKit.Admin.UrlShorting.UpdateShortenedUrlDto>"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/cms-kit-admin/url-shorting/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IDeleteAppService<System.Guid>"
+            }
+          }
+        },
+        "DataGap.CmsKit.Admin.Polls.PollAdminController": {
+          "controllerName": "PollAdmin",
+          "controllerGroupName": "PollAdmin",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "DataGap.CmsKit.Admin.Polls.PollAdminController",
+          "interfaces": [
+            {
+              "type": "DataGap.CmsKit.Admin.Polls.IPollAdminAppService"
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/poll",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Polls.GetPollListInput, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Polls.GetPollListInput",
+                  "typeSimple": "DataGap.CmsKit.Admin.Polls.GetPollListInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Filter",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.Polls.PollDto>",
+                "typeSimple": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.Polls.PollDto>"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IReadOnlyAppService<DataGap.CmsKit.Admin.Polls.PollWithDetailsDto,DataGap.CmsKit.Admin.Polls.PollDto,System.Guid,DataGap.CmsKit.Admin.Polls.GetPollListInput>"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/poll/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IReadOnlyAppService<DataGap.CmsKit.Admin.Polls.PollWithDetailsDto,DataGap.CmsKit.Admin.Polls.PollDto,System.Guid,DataGap.CmsKit.Admin.Polls.GetPollListInput>"
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/cms-kit-admin/poll",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Polls.CreatePollDto, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Polls.CreatePollDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Polls.CreatePollDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "DataGap.CmsKit.Admin.Polls.CreatePollDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Polls.CreatePollDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.ICreateAppService<DataGap.CmsKit.Admin.Polls.PollWithDetailsDto,DataGap.CmsKit.Admin.Polls.CreatePollDto>"
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/cms-kit-admin/poll/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Polls.UpdatePollDto, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Polls.UpdatePollDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Polls.UpdatePollDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "DataGap.CmsKit.Admin.Polls.UpdatePollDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Polls.UpdatePollDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Polls.PollWithDetailsDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IUpdateAppService<DataGap.CmsKit.Admin.Polls.PollWithDetailsDto,System.Guid,DataGap.CmsKit.Admin.Polls.UpdatePollDto>"
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/cms-kit-admin/poll/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.Jellog.Application.Services.IDeleteAppService<System.Guid>"
+            },
+            "GetWidgetsAsync": {
+              "uniqueName": "GetWidgetsAsync",
+              "name": "GetWidgetsAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/poll/widgets",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "DataGap.Jellog.Application.Dtos.ListResultDto<DataGap.CmsKit.Admin.Polls.PollWidgetDto>",
+                "typeSimple": "DataGap.Jellog.Application.Dtos.ListResultDto<DataGap.CmsKit.Admin.Polls.PollWidgetDto>"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Polls.IPollAdminAppService"
+            },
+            "GetResultAsyncById": {
+              "uniqueName": "GetResultAsyncById",
+              "name": "GetResultAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/poll/result",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Polls.GetResultDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Polls.GetResultDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Polls.IPollAdminAppService"
+            }
+          }
+        },
+        "DataGap.CmsKit.Admin.Newsletters.NewsletterRecordAdminController": {
+          "controllerName": "NewsletterRecordAdmin",
+          "controllerGroupName": "NewsletterRecordAdmin",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "DataGap.CmsKit.Admin.Newsletters.NewsletterRecordAdminController",
+          "interfaces": [
+            {
+              "type": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/newsletter",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsRequestInput, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsRequestInput",
+                  "typeSimple": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsRequestInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Preference",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Source",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.Newsletters.NewsletterRecordDto>",
+                "typeSimple": "DataGap.Jellog.Application.Dtos.PagedResultDto<DataGap.CmsKit.Admin.Newsletters.NewsletterRecordDto>"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/newsletter/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Newsletters.NewsletterRecordWithDetailsDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Newsletters.NewsletterRecordWithDetailsDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            },
+            "GetNewsletterRecordsCsvDetailAsyncByInput": {
+              "uniqueName": "GetNewsletterRecordsCsvDetailAsyncByInput",
+              "name": "GetNewsletterRecordsCsvDetailAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/newsletter/csv-detail",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput",
+                  "typeSimple": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Preference",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Source",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<DataGap.CmsKit.Admin.Newsletters.NewsletterRecordCsvDto>",
+                "typeSimple": "[DataGap.CmsKit.Admin.Newsletters.NewsletterRecordCsvDto]"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            },
+            "GetNewsletterPreferencesAsync": {
+              "uniqueName": "GetNewsletterPreferencesAsync",
+              "name": "GetNewsletterPreferencesAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/newsletter/preferences",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<System.String>",
+                "typeSimple": "[string]"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            },
+            "GetCsvResponsesAsyncByInput": {
+              "uniqueName": "GetCsvResponsesAsyncByInput",
+              "name": "GetCsvResponsesAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/newsletter/export-csv",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput",
+                  "typeSimple": "DataGap.CmsKit.Admin.Newsletters.GetNewsletterRecordsCsvRequestInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Preference",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Source",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "DataGap.Jellog.Content.IRemoteStreamContent",
+                "typeSimple": "DataGap.Jellog.Content.IRemoteStreamContent"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Newsletters.INewsletterRecordAdminAppService"
+            }
+          }
+        },
+        "DataGap.CmsKit.Admin.Contact.ContactSettingController": {
+          "controllerName": "ContactSetting",
+          "controllerGroupName": "ContactSetting",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "DataGap.CmsKit.Admin.Contact.ContactSettingController",
+          "interfaces": [
+            {
+              "type": "DataGap.CmsKit.Admin.Contact.IContactSettingsAppService"
+            }
+          ],
+          "actions": {
+            "GetAsync": {
+              "uniqueName": "GetAsync",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/cms-kit-admin/contact/settings",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "DataGap.CmsKit.Admin.Contact.CmsKitContactSettingDto",
+                "typeSimple": "DataGap.CmsKit.Admin.Contact.CmsKitContactSettingDto"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Contact.IContactSettingsAppService"
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "POST",
+              "url": "api/cms-kit-admin/contact/settings",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "DataGap.CmsKit.Admin.Contact.UpdateCmsKitContactSettingDto, DataGap.CmsKit.Pro.Admin.Application.Contracts",
+                  "type": "DataGap.CmsKit.Admin.Contact.UpdateCmsKitContactSettingDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Contact.UpdateCmsKitContactSettingDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "DataGap.CmsKit.Admin.Contact.UpdateCmsKitContactSettingDto",
+                  "typeSimple": "DataGap.CmsKit.Admin.Contact.UpdateCmsKitContactSettingDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": false,
+              "implementFrom": "DataGap.CmsKit.Admin.Contact.IContactSettingsAppService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

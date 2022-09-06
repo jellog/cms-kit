@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    
+    
+
+    <PropertyGroup><LangVersion>latest</LangVersion>
+        <TargetFramework>net5.0</TargetFramework>
+        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\studio\src\DataGap.Jellog.Studio.ModuleInstaller\DataGap.Jellog.Studio.ModuleInstaller.csproj" />
+        <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.VirtualFileSystem\DataGap.Jellog.VirtualFileSystem.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="..\..\DataGap.CmsKit.Pro.jellogmdl.json" />
+      <EmbeddedResource Include="..\..\DataGap.CmsKit.Pro.jellogmdl.json" />
+    </ItemGroup>
+
+</Project>

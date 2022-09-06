@@ -1,0 +1,61 @@
+﻿@page
+
+@using DataGap.CmsKit.Admin.Web.Pages
+@using DataGap.CmsKit.Pro.Admin.Web.Menus
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.Polls
+@using DataGap.CmsKit.Pro.Admin.Web.Pages
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+
+@inherits AdminPageBase
+
+@model CreateModalModel
+
+@{
+    Layout = null;
+}
+
+<form asp-page="/CmsKit/Polls/CreateModal">
+    <jellog-modal id="menu-create-modal">
+        <jellog-modal-header title="@L["New"].Value"></jellog-modal-header>
+        <jellog-modal-body>
+            <jellog-tabs name="PollCreateTabsId">
+                <jellog-tab title="@L["Question"].Value">
+                    <jellog-input asp-for="ViewModel.Question" />
+                    <jellog-select asp-for="ViewModel.Widget" />
+                    <jellog-input asp-for="ViewModel.StartDate" />
+                    <jellog-input asp-for="ViewModel.EndDate" />
+                    <jellog-input asp-for="ViewModel.ResultShowingEndDate" />
+                    <jellog-input asp-for="ViewModel.AllowMultipleVote" />
+                    <jellog-input asp-for="ViewModel.ShowVoteCount" />
+                    <jellog-input asp-for="ViewModel.ShowResultWithoutGivingVote" />
+                    <jellog-input asp-for="ViewModel.ShowHoursLeft" />
+                </jellog-tab>
+                <jellog-tab title="@L["Options"].Value">
+                    <h3>@L["Options"]</h3>
+                    <div class="pt-3 pb-5 clearfix">
+                        <jellog-row>
+                            <jellog-column size="_12">
+                                <jellog-input asp-for="NewOption" />
+                            </jellog-column>
+                        </jellog-row>
+                        <jellog-button id="CreateAddNewOptionButton" button-type="Success" class="float-end mb-2">
+                            <i class="fa fa-plus"></i> @L["AddNew"]
+                        </jellog-button>
+                    </div>
+                    <jellog-table striped-rows="true" responsive-sm="true" id="CreateOptionTableId" style="@(Model.ViewModel.PollOptions.Length > 0 ? "" : "display: none;")">
+                        <thead>
+                            <tr>
+                                <th scope="Column">@L["Text"]</th>
+                                <th scope="Column"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="CreateOptionTableBodyId">
+                        </tbody>
+                    </jellog-table>
+                </jellog-tab>
+            </jellog-tabs>
+        </jellog-modal-body>
+        <jellog-modal-footer buttons="@(JellogModalButtons.Cancel | JellogModalButtons.Save)"></jellog-modal-footer>
+    </jellog-modal>
+</form>
+<input hidden id="OptionStartIndex" value="@Model.ViewModel.PollOptions.Length" />

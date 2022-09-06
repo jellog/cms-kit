@@ -1,0 +1,17 @@
+﻿@page
+@using Localization.Resources.JellogUi
+@using Microsoft.Extensions.Localization
+@using DataGap.CmsKit.Pro.Public.Web.Pages.Public.Shared.Components.Contact
+@inject IStringLocalizer<JellogUiResource> Localizer
+@model DataGap.CmsKit.Pro.Pages.Contact.Index
+
+<div class="container mb-2">  
+    <div class="card">
+        <div class="card-header">Contact</div>  
+        <div class="card-body">
+            @{
+                @await Component.InvokeAsync(typeof(ContactViewComponent));    
+            }
+        </div>
+    </div>
+</div>

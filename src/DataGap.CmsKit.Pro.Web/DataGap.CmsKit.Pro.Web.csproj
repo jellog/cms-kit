@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataGap.CmsKit.Pro.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Web\DataGap.CmsKit.Web.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Admin.Web\DataGap.CmsKit.Pro.Admin.Web.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Application.Contracts\DataGap.CmsKit.Pro.Application.Contracts.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Public.Web\DataGap.CmsKit.Pro.Public.Web.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\licensing\DataGap.Jellog.Commercial.Core\DataGap.Jellog.Commercial.Core.csproj" />-->
+	  <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Core\DataGap.Jellog.Core.csproj" />
+  </ItemGroup>
+  
+</Project>

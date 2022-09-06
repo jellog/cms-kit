@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Application\DataGap.CmsKit.Application.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Application.Contracts\DataGap.CmsKit.Pro.Application.Contracts.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Admin.Application\DataGap.CmsKit.Pro.Admin.Application.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Public.Application\DataGap.CmsKit.Pro.Public.Application.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\licensing\DataGap.Jellog.Commercial.Core\DataGap.Jellog.Commercial.Core.csproj" />-->
+	  <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Core\DataGap.Jellog.Core.csproj" />
+  </ItemGroup>
+
+</Project>

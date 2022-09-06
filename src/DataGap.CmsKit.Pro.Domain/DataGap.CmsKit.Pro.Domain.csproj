@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataGap\CmsKit\Templates\*.tpl" />
+    <EmbeddedResource Include="DataGap\CmsKit\Templates\*.tpl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Domain\DataGap.CmsKit.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\modules\setting-management\src\DataGap.Jellog.SettingManagement.Domain\DataGap.Jellog.SettingManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Emailing\DataGap.Jellog.Emailing.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.TextTemplating\DataGap.Jellog.TextTemplating.csproj" />
+    <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.AutoMapper\DataGap.Jellog.AutoMapper.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Domain.Shared\DataGap.CmsKit.Pro.Domain.Shared.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\licensing\DataGap.Jellog.Commercial.Core\DataGap.Jellog.Commercial.Core.csproj" />-->
+	  <ProjectReference Include="..\..\..\..\framework\src\DataGap.Jellog.Core\DataGap.Jellog.Core.csproj" />
+  </ItemGroup>
+
+</Project>

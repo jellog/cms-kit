@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.CmsKit.Localization
+@inject IHtmlLocalizer<CmsKitResource> L
+@model DataGap.CmsKit.Admin.Contact.CmsKitContactSettingDto
+
+<jellog-tabs>
+    <jellog-tab active="true" title="@L["CmsKitPro:Contact"].Value">
+        <form id="CmsKitProContactSettingsForm">
+            <jellog-row>
+                <jellog-column size-md="_12">
+                    <div>
+                        <jellog-input asp-for="ReceiverEmailAddress" label="@L["ReceiverEmailAddress"].Value" />
+                    </div>
+                    <hr class="my-4" />
+                    <div>
+                        <jellog-button button-type="Primary" type="submit"><i class="fa fa-save"></i> @L["Save"]</jellog-button>
+                    </div>
+                </jellog-column>
+            </jellog-row>
+        </form>
+    </jellog-tab>
+</jellog-tabs>

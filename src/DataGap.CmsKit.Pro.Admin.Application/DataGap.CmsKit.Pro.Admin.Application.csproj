@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\modules\cms-kit\src\DataGap.CmsKit.Admin.Application\DataGap.CmsKit.Admin.Application.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Domain\DataGap.CmsKit.Pro.Domain.csproj" />
+    <ProjectReference Include="..\DataGap.CmsKit.Pro.Admin.Application.Contracts\DataGap.CmsKit.Pro.Admin.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="15.0.9" />
+  </ItemGroup>
+
+</Project>

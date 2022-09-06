@@ -1,0 +1,46 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Layout
+@using DataGap.Jellog.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.JellogPageToolbar
+@using DataGap.CmsKit.Localization
+@using DataGap.CmsKit.Pro.Admin.Web.Menus
+@using DataGap.CmsKit.Pro.Admin.Web.Pages.CmsKit.UrlShorting
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<CmsKitResource> L
+
+@{
+    PageLayout.Content.Title = L["UrlForwarding"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:CMS"].Value);
+    PageLayout.Content.MenuItemName = CmsKitProAdminMenus.UrlShorting.UrlShortingMenu;
+}
+
+@section scripts {
+    <jellog-script-bundle name="@typeof(IndexModel).FullName">
+        <jellog-script src="/client-proxies/cms-kit-pro-admin-proxy.js" />
+        <jellog-script src="/Pages/CmsKit/UrlShorting/Index.js"/>
+    </jellog-script-bundle>
+}
+
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(JellogPageToolbarViewComponent), new {pageName = typeof(IndexModel).FullName})
+}
+
+<jellog-card>
+    <jellog-card-body>
+        <jellog-row id="AdvancedFilterSection">
+            <jellog-column size="_12">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <input asp-for="Filter" placeholder="@L["Search"]" class="form-control"/>
+                        <jellog-button button-type="Primary" id="RefreshFilterButton">
+                            <i class="fa fa-sync" aria-hidden="true"></i>
+                        </jellog-button>
+                    </div>
+                </div>
+            </jellog-column>
+        </jellog-row>
+    </jellog-card-body>
+</jellog-card>
+
+<jellog-table striped-rows="true" id="UrlShortingTable" class="nowrap"></jellog-table>
